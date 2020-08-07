@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
 
@@ -25,5 +25,5 @@ def create_tables():
 if __name__ == "__main__":
     from db import db
     db.init_app(app)
-
+    print("flask app is running")
     app.run(port = 5000, debug = True)
