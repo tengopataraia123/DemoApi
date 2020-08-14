@@ -17,10 +17,6 @@ api = Api(app)
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(ItemList, "/items")
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 
 if __name__ == "__main__":
     from db import db
