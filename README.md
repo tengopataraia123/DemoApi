@@ -20,3 +20,14 @@
 > "sentence" : "This is my demo sentence"
 > } 
 > ```
+> 
+**FrequencyDistribution**
+>
+> სერვისი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და აბრუნებს სიტყვების სიხშირის განაწილების სიას
+> ``` 
+> endpoint: _/FreqDist_
+> type: GET 
+> body: {
+> "text" : "This is my demo text"
+> } 
+> ```
