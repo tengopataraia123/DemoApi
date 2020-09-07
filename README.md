@@ -1,21 +1,19 @@
-# Unilab Flask Server [demo]
-This is Flask Web Server for my project <project_name>
+# Unilab Demo API
+რეპოზიტორია წარმოადგენს NLTK ბიბლიოთეკის გარშემო აწყობილ საცდელ API-ს
+
 
 ## Documentation
 
-Template project for stores/market
+ვებ სერვისის გამოყენება შეგიძლიათ შესაბამის მისამართზე მოთხოვნის გასაგზავნად.
 
-**Methods**: 
+მოთხოვნის მისამართი და მოთხოვნის body შეგიძლიათ ნახოთ მეთოდების ჩამონათვალში
 
-GET : _/items_
-
-GET : _/item_/<name_of_the_product>
-
-POST : _/item_/<name_of_the_product>
-`price` _type:_ float
-
-PUT : _/item_/<name_of_the_product>
-`price` _type:_ float
-
-DELETE : _/item_/<name_of_the_product>
-`price` _type:_ float
+**Methods**:
+> ####endpoint: _/TemSenTok_
+> სერვისი მოთხოვნილ წინადადებას უკეთებს ტოკენიზაციას და აბრუნებს ტოკენიზებულ სიას
+> ``` 
+> type: GET 
+> body: {
+> "sentence" : "This is my demo sentence"
+> } 
+> ```
