@@ -8,10 +8,13 @@
 
 მოთხოვნის მისამართი და მოთხოვნის body შეგიძლიათ ნახოთ მეთოდების ჩამონათვალში
 
-**Methods**:
-> ####endpoint: _/TemSenTok_
+###Methods:
+
+**TemSentenceTokenizer**
+>
 > სერვისი მოთხოვნილ წინადადებას უკეთებს ტოკენიზაციას და აბრუნებს ტოკენიზებულ სიას
 > ``` 
+> endpoint: _/TemSenTok_
 > type: GET 
 > body: {
 > "sentence" : "This is my demo sentence"
