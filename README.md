@@ -8,12 +8,26 @@
 
 მოთხოვნის მისამართი და მოთხოვნის body შეგიძლიათ ნახოთ მეთოდების ჩამონათვალში
 
-**Methods**:
-> ####endpoint: _/TemSenTok_
+##Methods:
+
+**TemSentenceTokenizer**
+>
 > სერვისი მოთხოვნილ წინადადებას უკეთებს ტოკენიზაციას და აბრუნებს ტოკენიზებულ სიას
 > ``` 
+> endpoint: _/TemSenTok_
 > type: GET 
 > body: {
 > "sentence" : "This is my demo sentence"
+> } 
+> ```
+> 
+**FrequencyDistribution**
+>
+> სერვისი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და აბრუნებს სიტყვების სიხშირის განაწილების სიას
+> ``` 
+> endpoint: _/FreqDist_
+> type: GET 
+> body: {
+> "text" : "This is my demo text"
 > } 
 > ```
