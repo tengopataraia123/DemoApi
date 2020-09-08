@@ -31,3 +31,14 @@
 > "text" : "This is my demo text"
 > } 
 > ```
+
+**GroupingMultiplePatters**
+>
+> სერვისი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და აბრუნებს სიმბოლოებისგან გაწმენდილ ტექსტს
+> ``` 
+> endpoint: _/GMultiplePatterns_
+> type: GET 
+> body: {
+> "text" : "This is my demo sentence"
+> } 
+> ```
