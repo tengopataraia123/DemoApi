@@ -1,6 +1,8 @@
 from flask_restful import Resource, reqparse
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize,sent_tokenize
 from nltk.probability import FreqDist
+
+
 class TemSentenceTokenizer(Resource):
 
     parser = reqparse.RequestParser()
@@ -39,5 +41,28 @@ class FrequencyDistribution(Resource):
 
 
         return {'result': freqdist}
+
+
+class SentenceTokenizer(Resource):
+
+    parser = reqparse.RequestParser()
+    parser.add_argument('sentence',
+                        type=str,
+                        required=True,
+                        help="გთხოვთ შეიყვანოთ სწორი წინადადება")
+
+    def get(self):
+        data = SentenceTokenizer.parser.parse_args()
+        sentence = data['sentence']
+        try:
+
+
+            tokenized_words = sent_tokenize(sentence)
+
+        except Exception as error:
+            return {'error' : error}
+
+        else:
+            return {'result': tokenized_words}, 200
 
 
