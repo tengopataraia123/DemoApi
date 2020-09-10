@@ -31,3 +31,14 @@
 > "text" : "This is my demo text"
 > } 
 > ```
+> 
+**SentenceTokenizer**
+> 
+> სერვისი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და აბრუნებს წინადადებების დანომრილ სიას.
+> ```
+> endpoint: _/SentTok_
+> type: GET
+> body: {
+> "text" : "It was many and many a year ago. In a kingdom by the sea. That a maiden there lived whom you may know By the name of Annabel Lee."
+> }
+> ```
