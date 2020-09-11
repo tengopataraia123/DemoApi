@@ -31,7 +31,18 @@
 > "text" : "This is my demo text"
 > } 
 > ```
-> 
+
+**GroupingMultiplePatters**
+>
+> სერვისი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და აბრუნებს სიმბოლოებისგან გაწმენდილ ტექსტს
+> ``` 
+> endpoint: _/GMultiplePatterns_
+> type: GET 
+> body: {
+> "text" : "This is my demo sentence"
+> } 
+> ```
+
 **Chunk_CleanSentences**
 >
 > Devides and clears the sentence of punctuation marks and builds a dependency tree on each sentence. Allocates its own names and verbs.
@@ -40,5 +51,3 @@
 > type: GET 
 > body: {
 > "text" : "Any Text"
-> } 
-> ```
