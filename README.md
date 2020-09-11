@@ -42,3 +42,12 @@
 > "text" : "This is my demo sentence"
 > } 
 > ```
+
+**Chunk_CleanSentences**
+>
+> Devides and clears the sentence of punctuation marks and builds a dependency tree on each sentence. Allocates its own names and verbs.
+> ``` 
+> endpoint: _/Chunk
+> type: GET 
+> body: {
+> "text" : "Any Text"
