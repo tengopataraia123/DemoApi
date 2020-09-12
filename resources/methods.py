@@ -1,6 +1,8 @@
 from flask_restful import Resource, reqparse
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
+from flask import jsonify
+
 class TemSentenceTokenizer(Resource):
 
     parser = reqparse.RequestParser()
@@ -13,15 +15,13 @@ class TemSentenceTokenizer(Resource):
         data = TemSentenceTokenizer.parser.parse_args()
         sentence = data['sentence']
         try:
-
-
             tokenized_words = word_tokenize(sentence)
 
         except Exception as error:
-            return {'error' : error}
+            return jsonify({'error' : error}), 400
 
         else:
-            return {'result': tokenized_words}, 200
+            return jsonify({'result': tokenized_words}), 200
 
 class FrequencyDistribution(Resource):
     parser = reqparse.RequestParser()
