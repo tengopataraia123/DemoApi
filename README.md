@@ -15,7 +15,7 @@
 
 ## Methods:
 
-### Postman-ის კოლექციასთან სამუშაოდ: 
+### Postman-ის კოლექციასთან სამუშაოდ:  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/04c67bb43adc0e74b22f)
 
 [<img align="middle" width="150" src="https://edit.blog.postman.com/wp-content/uploads/2015/08/postman-logo-drawing-board.png">](https://app.getpostman.com/join-team?invite_code=78f92fcf5753f9fcc222ed95db9052ca) 
 
