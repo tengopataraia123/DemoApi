@@ -15,6 +15,8 @@
 
 ## Methods:
 
+### Postman-ის კოლექციასთან სამუშაოდ: [<img align="right" width="150" src="https://www.vhv.rs/dpng/d/499-4996069_postman-logo-circle-hd-png-download.png">](https://app.getpostman.com/join-team?invite_code=78f92fcf5753f9fcc222ed95db9052ca) < შემოგვიერთდი
+
 **TemSentenceTokenizer**
 >
 > სერვისი მოთხოვნილ წინადადებას უკეთებს ტოკენიზაციას და აბრუნებს ტოკენიზებულ სიას
