@@ -18,7 +18,7 @@ class TemSentenceTokenizer(Resource):
             tokenized_words = word_tokenize(sentence)
 
         except Exception as error:
-            return jsonify({'error' : error}), 400
+            return jsonify({'error' : f"დაფიქსირდა შეცდომა: {error}"}), 400
 
         else:
             return jsonify({'result': tokenized_words}), 200
