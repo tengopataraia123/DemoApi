@@ -2,6 +2,7 @@ from flask_restful import Resource, reqparse
 from nltk.tokenize import word_tokenize,sent_tokenize
 from nltk.probability import FreqDist
 from flask import jsonify
+import spacy
 
 class TemSentenceTokenizer(Resource):
 
@@ -64,4 +65,27 @@ class SentenceTokenizer(Resource):
         else:
             return {'result': tokenized_words}, 200
 
+
+class DepTreeSvgMaker(Resource):
+
+	parser = reqparse.RequestParser()
+	parser.add_argument("sentence",
+						type=str,
+						required=True,
+						help="გთხოვთ შეიყვანოთ სწორი წინადადება")
+
+	nlp = spacy.load("en_core_web_sm")
+
+	def get(self):
+		data = self.parser.parse_args()
+		sentence = data["sentence"]
+
+		try:
+			text = self.nlp(sentence)
+			svg = spacy.displacy.render(text,style="dep")
+
+		except Exception as error:
+			return {'error' : error}
+
+		return jsonify({'result': svg})
 

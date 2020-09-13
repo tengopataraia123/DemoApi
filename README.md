@@ -62,3 +62,12 @@
 > type: GET 
 > body: {
 > "text" : "Any Text"
+
+**DepTreeSvgMaker**
+>
+> Created dependency tree svg image and returns
+> ``` 
+> endpoint: _/DepTree
+> type: GET 
+> body: {
+> "sentence" : "Any Text"
