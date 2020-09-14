@@ -10,6 +10,7 @@ from resources.methods import FrequencyDistribution
 from resources.mariam_kvantaliani.methods import GroupingMultiplePatters
 from resources.chunk_CleanSentences import Chunk_CleanSentences
 from resources.methods import SentenceTokenizer
+from resources.frequencyReturner import FrequencyReturner
 from resources.methods import DepTreeSvgMaker
 
 app = Flask(__name__)
@@ -26,6 +27,11 @@ api.add_resource(FrequencyDistribution, '/FreqDist')
 api.add_resource(GroupingMultiplePatters, '/GMultiplePatterns')
 api.add_resource(Chunk_CleanSentences, '/Chunk')
 api.add_resource(SentenceTokenizer ,'/sentence')
+api.add_resource(FrequencyReturner, '/FreqReturner')
+#ეს არის კომენტარი გიტჰაბიდან
+
+
+#ეს არის კომენტარი კომპიუტერიდან
 api.add_resource(DepTreeSvgMaker,"/DepTree")
 
 if __name__ == "__main__":
