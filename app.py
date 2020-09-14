@@ -27,6 +27,8 @@ api.add_resource(GroupingMultiplePatters, '/GMultiplePatterns')
 api.add_resource(Chunk_CleanSentences, '/Chunk')
 api.add_resource(SentenceTokenizer ,'/sentence')
 api.add_resource(FrequencyReturner, '/FreqReturner')
+#ეს არის კომენტარი გიტჰაბიდან
+
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
