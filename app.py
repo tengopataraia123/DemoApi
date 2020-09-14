@@ -27,6 +27,8 @@ api.add_resource(GroupingMultiplePatters, '/GMultiplePatterns')
 api.add_resource(Chunk_CleanSentences, '/Chunk')
 api.add_resource(SentenceTokenizer ,'/sentence')
 api.add_resource(FrequencyReturner, '/FreqReturner')
+#ეს არის კომენტარი გიტჰაბიდან
+
 
 #ეს არის კომენტარი კომპიუტერიდან
 
