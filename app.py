@@ -25,7 +25,7 @@ api.add_resource(TemSentenceTokenizer, '/TemSenTok')
 api.add_resource(FrequencyDistribution, '/FreqDist')
 api.add_resource(GroupingMultiplePatters, '/GMultiplePatterns')
 api.add_resource(Chunk_CleanSentences, '/Chunk')
-api.add_resource(SentenceTokenize, '/sentence')
+api.add_resource(SentenceTokenizer, '/sentence')
 api.add_resource(FrequencyReturner, '/FreqReturner')
 
 if __name__ == "__main__":
