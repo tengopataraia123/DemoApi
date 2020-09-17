@@ -15,4 +15,4 @@ api.add_resource(TemSentenceTokenizer, '/TemSenTok')
 api.add_resource(PosTagging, '/PosTag')
 
 if __name__ == "__main__":
-    app.run(port = 5000, debug = True)
+    app.run(port=5000, debug=True)

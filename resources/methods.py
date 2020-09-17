@@ -27,7 +27,7 @@ class TemSentenceTokenizer(Resource):
 class PosTagging(Resource):
 
     parser = reqparse.RequestParser()
-    parser.add_argument('text',
+    parser.add_argument('text and',
                         type=str,
                         required=True,
                         help="გთხოვთ შეიყვანოთ სწორი წინადადება")
