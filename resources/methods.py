@@ -26,17 +26,17 @@ class TemSentenceTokenizer(Resource):
         else:
             return jsonify({'result': tokenized_words}), 200
 
-class FrequencyDistribution(Resource):
+class SentTokenizer(Resource):
     parser = reqparse.RequestParser()
-    parser.add_argument('text',
+    parser.add_argument('teqsti',
                         type=str,
                         required=True,
                         help="გთხოვთ შეიყვანოთ სწორი ტექსტი")
 
     def get (self):
-        data = FrequencyDistribution.parser.parse_args()
-        text = data['text']
-        clean_text=word_tokenize(text)
+        data = SentTokenizer.parser.parse_args()
+        teqsti = data['teqsti']
+        clean_text=sent_tokenize(teqsti)
         freqdist=FreqDist(clean_text)
 
 
