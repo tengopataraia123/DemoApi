@@ -5,6 +5,7 @@ import nltk
 nltk.download('punkt')
 
 from resources.methods import TemSentenceTokenizer
+
 from resources.methods import FrequencyDistribution
 from resources.methods import TemSentenceTokenizer, PosTagging
 from resources.mariam_kvantaliani.methods import GroupingMultiplePatters
@@ -12,6 +13,7 @@ from resources.chunk_CleanSentences import Chunk_CleanSentences
 from resources.methods import SentenceTokenizer
 from resources.frequencyReturner import FrequencyReturner
 from resources.methods import sentTok
+from resources.methods import SentTokenizer
 
 app = Flask(__name__)
 api = Api(app)
@@ -24,6 +26,7 @@ def home():
 
 api.add_resource(TemSentenceTokenizer, '/TemSenTok')
 api.add_resource(FrequencyDistribution, '/FreqDist')
+api.add_resource(SentTokenizer, '/SentTokenizer')
 api.add_resource(GroupingMultiplePatters, '/GMultiplePatterns')
 api.add_resource(Chunk_CleanSentences, '/Chunk')
 api.add_resource(SentenceTokenizer, '/sentence')
