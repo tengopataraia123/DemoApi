@@ -1,9 +1,11 @@
 from flask_restful import Resource, reqparse
+
+
 from nltk.tokenize import word_tokenize,sent_tokenize
 from nltk.probability import FreqDist
 
 from flask import jsonify
-from nltk.tokenize import sent_tokenize
+import nltk
 
 class TemSentenceTokenizer(Resource):
 
@@ -79,3 +81,24 @@ class SentenceTokenizer(Resource):
         data = sentTok.parser1.parse_args()
         text = data['text']
         return {"result": sent_tokenize(text)}
+      class PosTagging(Resource):
+
+    parser = reqparse.RequestParser()
+    parser.add_argument('text and',
+                        type=str,
+                        required=True,
+                        help="გთხოვთ შეიყვანოთ სწორი წინადადება")
+
+    def get(self):
+        data = PosTagging.parser.parse_args()
+        text = data['text']
+        try:
+           tokenized_words = word_tokenize(text)
+           tags = nltk.pos_tag(tokenized_words)
+
+        except Exception as error:
+            return {'error': error}
+
+        else:
+            return {'result': tags}, 200
+

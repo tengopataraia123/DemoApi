@@ -33,7 +33,7 @@
 > "sentence" : "This is my demo sentence"
 > } 
 > ```
-> 
+
 **FrequencyDistribution**
 >
 > სერვისი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და აბრუნებს სიტყვების სიხშირის განაწილების სიას
@@ -44,8 +44,6 @@
 > "text" : "This is my demo text"
 > } 
 > ```
-
-=======
 
 **GroupingMultiplePatters**
 >
@@ -75,5 +73,14 @@
 > type: GET
 > body: {
 > "text" : "It was many and many a year ago. In a kingdom by the sea. That a maiden there lived whom you may know By the name of Annabel Lee."
+
+> >**PosTagging**
+>
+> მეთოდი მოთხოვნილ ტექსტს უკეთებს ტოკენიზაციას და შემდეგ აკეთებს წინადადებაში მისი ნაწილების ამოცნობას. გვიბრუნდება ტოკენიზირებული ტექსტი და შესაბამისი მეტყველების ნაწილები.
+> ```
+> endpoint: _/PosTag_
+> type: GET
+> body: {
+> "text" : "This is my demo text"
 > }
 > ```
